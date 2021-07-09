@@ -1,0 +1,235 @@
+<html>
+<style>
+body{
+background:rgba(152,235,89,0.7);
+}
+#navbar{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:20%;
+  height:100%;
+  border-style:solid;
+  z-index:1;
+  background:rgba(172,89,235,0.8);
+}
+#main-doc{
+  position:relative;
+  left:21%;
+  margin-right:21%;
+ text-align:justify;
+   
+}
+
+@media (max-width:700px)
+{
+  #navbar{
+    position:relative;
+    width:100%;
+    height:auto;
+    left:16%;
+    border-style:none; 
+    text-align:justify;
+  }
+  #main-doc{
+  position:relative;
+  left:16%;
+  margin-right:16%;
+  text-align:justify; 
+   }
+}
+#ruby{
+  font-size:21px;
+  text-decoration:underline;
+  font-weight:bold;
+  
+}
+.nav-link{
+  text-decoration:none;
+  line-height:20px;
+  color:#000000;
+ 
+  }
+.nav-link:hover{
+  color:black;
+  text-decoration:underline;
+}
+
+header{
+  font-weight:bold;
+  font-size:20px;
+  text-decoration:underline;
+}
+pre{
+  background:white;
+  background:rgba(255,255,235,0.5);
+  padding-left:20px;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+p{
+  line-height:23px;
+}
+#source{
+  text-align:center;
+  margin-top:50px;
+  font-size:15px;
+  font-style:italic;
+}
+#link:hover{
+  color:black;
+}
+
+
+</style>
+
+
+<body>
+<nav id="navbar">
+      <header id="ruby">Ruby documentation</header>
+  <div id="linkset">
+    <ol>
+     <li> <a href="#Introduction" class="nav-link">Introduction</a></li><br>
+      <li> <a href="#Keywords" class="nav-link">Keywords</a></li><br>
+     <li> <a href="#Data_types" class="nav-link">Data types</a></li><br>
+     <li> <a href="#Basic_syntax" class="nav-link">Basic syntax</a></li><br>
+     <li> <a href="#Hello_World" class="nav-link">Hello World</a></li><br>
+  </div>
+    </nav>
+  
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+      <p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. Ruby is a pure Object-Oriented language developed by Yukihiro Matsumoto. Everything in Ruby is an object except the blocks but there are replacements too for it i.e procs and lambda. The objective of Ruby’s development was to make it act as a sensible buffer between human programmers and the underlying computing machinery.</p>
+  </section>
+  <section class="main-section" id="Keywords">
+     <header>Keywords</header>
+       <p>Keywords or Reserved words are the words in a language that are used for some internal process or represent some predefined actions. These words are therefore not allowed to use as variable names or objects or as constants. Doing this may result in compile-time error.</p>
+    <p>Keywords are as follows:</p>
+       <p> <em> BEGIN, END, alias, and, begin, break, case, class, def, module, next, nil, not, or, redo, rescue, retry, return, elsif, end, false, ensure, for, if, true, undef, unless, do, else, super, then, until, when, while, defined?, self.</em></p>
+</p>
+  </section>
+  <section class="main-section" id="Data_types">
+     <header>Data types</header>
+       <p>Data types in Ruby represents different types of data like text, string, numbers, etc. All data types are based on classes because it is a pure Object-Oriented language.<br> There are different data types in Ruby as follows:</p>
+       <ul>
+         <li>Numbers</li>
+         <li>Boolean</li>
+         <li>Strings</li>
+         <li>Hashes</li>
+         <li>Arrays</li>
+         <li>Symbols</li>
+       </ul>
+       <p><strong>Numbers:</strong> 
+        Generally a number is defined as a series of digits, using a dot as a decimal mark. Optionally the user can use the underscore as a separator. There are different kinds of numbers like integers and float. Ruby can handle both Integers and floating point numbers. According to their size, there are two types of integers, one is Bignum and second is Fixnum.</p>
+       <pre>
+       <code>
+# Ruby program to illustrate the
+# Numbers Data Type
+  
+# float type
+distance = 0.1
+  
+# both integer and float type
+time = 9.87 / 3600
+speed = distance / time
+puts "The average speed of a sprinter is #{speed} km/h"</code></pre>
+       <p><strong>Boolean:</strong> Boolean data type represents only one bit of information either true or false.</p>
+       <pre>
+       <code>
+# Ruby program to illustrate the
+# Boolean Data Type
+  
+if true
+  puts "It is True!"
+else
+  puts "It is False!"
+end
+  
+if nil
+  puts "nil is True!"
+else
+  puts "nil is False!"
+end
+  
+if 0
+  puts "0 is True!"
+else
+  puts "0 is False!"
+end</code></pre>
+       <p><strong>Strings:</strong> A string is a group of letters that represent a sentence or a word. Strings are defined by enclosing a text within a single (”) or double (“”) quotes. You can use both double quotes and single quotes to create strings. Strings are objects of class String. Double-quoted strings allow substitution and backslash notation but single-quoted strings doesn’t allow substitution and allow backslash notation only for \\ and \’.</p>
+       <pre>
+       <code>
+# Ruby program to illustrate the
+# Strings Data Type
+  
+#!/usr/bin/ruby -w
+puts "String Data Type";
+puts 'escape using "\\"';
+puts 'That\'s right';</code></pre>
+       <p><strong>Hashes:</strong> A hash assign its values to its key. Value to a key is assigned by => sign. A key pair is separated with a comma between them and all the pairs are enclosed within curly braces. A hash in Ruby is like an object literal in JavaScript or an associative array in PHP. They’re made similarly to arrays.e. A trailing comma is ignored.</p>
+       <pre>
+       <code>
+# Ruby program to illustrate the
+# Hashes Data Type
+  
+#!/usr/bin/ruby
+hsh = colors = { "red" => 0xf00, "green" => 0x0f0, "blue" => 0x00f }
+hsh.each do |key, value|
+ print key, " is ", value, "\n"
+end</code></pre>
+         <p><strong>Arrays:</strong> An array stores data or list of data. It can contain all types of data. Data in an array are separated by comma in between them and are enclosed within square bracket.The position of elements in an array starts with 0. A trailing comma is ignored.</p>
+       <pre>
+       <code>
+# Ruby program to illustrate the
+# Arrays Data Type
+  
+#!/usr/bin/ruby
+ary = [ "fred", 10, 3.14, "This is a string", "last element", ]
+ary.each do |i|
+ puts i
+end</code></pre>
+       <p><strong>Symbols:</strong> Symbols are light-weight strings. A symbol is preceded by a colon (:). They are used instead of strings because they can take up much less memory. Symbols have better performance.
+
+</p>
+       <pre>
+       <code>
+# Ruby program to illustrate the
+# Symbols Data Type
+  
+#!/usr/bin/ruby
+domains = {:sk => "GeeksforGeeks", :no => "GFG", :hu => "Geeks"}
+  
+puts domains[:sk]
+puts domains[:no]
+puts domains[:hu]</code></pre>
+  </section>
+  <section class="main-section" id="Basic_syntax">
+     <header>Basic syntax</header>
+       <p><h4>End of a line in Ruby</h4>
+Ruby interprets newline characters(\n) and semicolons(;) as the end of a statement.<br>
+Note: If a line has +, – or backslash at the end of a line, then it indicates the continuation of a statement.</p>
+       <p><h4>Whitespace in Ruby</h4>
+Whitespace characters such as spaces and tabs are generally ignored in Ruby code, except when they appear in a string, i.e. it ignores all spaces in a statement But sometimes, whitespaces are used to interpret ambiguous statements.</p>
+    <p><h4>Ruby BEGIN and END statement</h4>
+BEGIN statement is used to declare a part of code which must be called before the program runs.<br>Similarly, END is used to declare a part of code which must be called at the end of program.</p>
+       <p><h4>Ruby comments</h4>
+A comment hides some part of code, from the Ruby Interpreter. Comments can be written in different ways, using hash character(#) at the beginning of a line.</p>
+    <p><h4>Identifiers in Ruby</h4>
+Identifiers are names of variables, constants and functions/methods.
+Ruby identifiers are case sensitive.
+Ruby identifiers may consists of alphanumeric characters and also underscore ( _ ).<br>
+For example: Man_1, item_01 are examples of identifiers.</p>
+       <p><h4>Keywords in Ruby</h4>
+The reserved words in Ruby which cannot be used as constant or variable names are called keywords of Ruby.</p>
+  </section>
+  <section class="main-section" id="Hello_World">
+     <header>Hello World</header>
+       <p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. Hello World the program is the most basic and first program when we start a new programming language. This simply prints Hello World on the screen. Below is the program to write hello world”.</p>
+    <pre><code>puts "Hello World"</code></pre>
+  </section>
+       <footer id="source">All the information provided here are from <a href="https://www.geeksforgeeks.org/ruby-programming-language/" target="_blank"><b id="link">www.geeksforgeeks.org.</b> </a></footer>
+</main>
+    
+    </body>
+</html>
