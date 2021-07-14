@@ -1,0 +1,160 @@
+<html>
+<style>
+body{
+  background:rgba(255,255,255,0.5);
+  display:flex;
+  flex-direction:column;
+}
+#navbar{
+  height:80px;
+  background:rgba(58,41,240,1);
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  border-style:solid;
+  border-width:2px;
+  position:fixed;
+  width:96.5vw;
+  z-index:1;
+  
+}
+#nav-link{
+  position:relative;
+  right:10px;
+  word-spacing:30px;
+}
+.text{
+  color:rgba(0,0,0,0.7);
+  text-decoration:none;
+  font-size:25px;
+  font-weight:bold;
+  font-family:verdana;
+}
+.text:hover{
+  color:rgba(0,0,0,1);
+  text-decoration:underline;
+}
+#welcome-section{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:rgba(223,240,41,0.8);
+  line-height:0px;
+  margin-top:80px;
+}
+
+
+h1{
+  color:rgba(0,0,0,0.9);
+  font-size:45px;
+  
+}
+#a{
+  font-size:25px;
+  font-style:italic;
+}
+#b{
+  font-size:15px;
+  font-style:italic;
+}
+#projects{
+  background:rgba(41,240,58,0.6);
+  height:100vh;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+  height:300px;
+}
+.project-tile{
+  width:230px;
+  height:230px;
+ background:rgba(255,255,255,0.4);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
+  position:relative;
+  
+}
+.link{
+  text-decoration:none;
+  color:black;
+  
+}
+.link:hover{
+  text-decoration:underline;
+  color:blue;
+}
+.image{
+  height:200px;
+  width:200px;
+}
+.logo:hover{
+  
+  padding-top:10px;
+}
+@media (max-width:300px){
+  body{
+    font-size:80%;
+  }
+}
+#contact{
+display:flex;
+  flex-direction:row;
+  justify-content:center;
+  background:rgba(240,41,223,0.8);
+ padding-top:20px;
+}
+
+.image:hover{
+  border-style:solid;
+  border-color:black;
+ 
+}
+</style>
+<body>
+  <nav id="navbar">
+    <div id="nav-link">
+    <a class="text" href="#welcome-section">About</a>
+    <a class="text" href="#projects">Works</a>
+    <a class="text" href="#contact">Contact</a>
+    </div>
+  </nav>
+  <section id="welcome-section">
+    <h1>I am Karthika!</h1>
+    <p id="a">A front end web developer</p>
+    <p id="b">Html|CSS</p>
+  </section>
+  <section id="projects">
+    
+    
+    <div class="project-tile">
+      <a href="https://codepen.io/kattycreates/pen/MWmyvXL" target="_blank"> <img class="image" src="https://github.com/kattycreates/Product-landing-page/blob/main/screenshot.JPG?raw=true" alt=""> </a>
+      <a class="link" target="_blank" href="https://codepen.io/kattycreates/pen/MWmyvXL">Product landing page</a></div>
+    <div class="project-tile">
+     <a href="https://codepen.io/kattycreates/pen/OJmMoyg" target="_blank">  <img class="image" src="https://github.com/kattycreates/Web_development/blob/main/form%20snap.JPG?raw=true" alt=""></a>
+      <a class="link" target="_blank" href="https://codepen.io/kattycreates/pen/OJmMoyg">Survey form</a></div>
+    <div class="project-tile">
+     <a href="https://codepen.io/kattycreates/pen/LYyGEXW" target="_blank">  <img class="image" src="https://github.com/kattycreates/First_tribute_page_BTS/raw/main/Capture.JPG" alt=""></a>
+      <a class="link" target="_blank"  href="https://codepen.io/kattycreates/pen/LYyGEXW">Tribute page</a></div>
+    <div class="project-tile">
+      <a href="https://codepen.io/kattycreates/pen/dyWXYzg" target="_blank"> <img class="image" src="https://github.com/kattycreates/Web_development/raw/main/snapshot.JPG" alt=""></a>
+      <a class="link" target="_blank"  href="https://codepen.io/kattycreates/pen/dyWXYzg">Technical documentation</a></div>
+    
+  </section>
+  <section id="contact">
+     
+    <div style="width: 25%; float:left;">
+    <a id="profile-link" href="https://github.com/kattycreates" target="_blank"><img class="logo" style="width:50px; height:50px;" src="https://avatars.githubusercontent.com/u/9919?s=280&v=4" alt=""> </a> <p>Github</p></div>
+    <div>
+    <a id="twitter-link" href="https://twitter.com/kattycreates" target="_blank"><img class="logo" style="width:50px; height:50px;" src="data:image/jpeg;base64,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" alt=""></a><p>Twitter</p>
+    </div>
+  </section>
+  
+</body>
+
+
+</html>
